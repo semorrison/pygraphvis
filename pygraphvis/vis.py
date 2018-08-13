@@ -81,10 +81,6 @@ class Visualiser:
         self.viewport = Viewport(vec.mul(size, -0.5 * scale), scale)
         self.screen = pygame.display.set_mode(self._size)
 
-    def start(self):
-        self.thread = threading.Thread(target = self.render_loop)
-        self.thread.start()
-
     def stop(self):
         self.running = False
 
